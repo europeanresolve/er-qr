@@ -1,0 +1,64 @@
+# European Resolve QR codes - settings
+# Edit this file, then run:  python er_qr.py
+# Paths are relative to this file.
+
+# Look --------------------------------------------------------------------
+theme      = "all"        # formal | activation | digital | all
+formats    = ["png", "svg"]  # png for screens and documents, svg for print and banners
+size       = 1500            # PNG width in pixels (1500 px is about 12.7 cm at 300 dpi)
+
+# Logo --------------------------------------------------------------------
+logo       = "logo.png"      # set to "" for no logo
+logo_mode  = "auto"          # auto | badge | mark | as-is
+                             #   badge: dark tile with amber chevrons
+                             #   mark:  chevrons alone in Resolve Black
+                             #   auto:  badge on formal/digital, mark on activation
+logo_size  = 0.22            # share of the code width, max 0.30
+
+# Text --------------------------------------------------------------------
+# Defaults used when a code below doesn't set its own. Leave "" for none.
+# Text --------------------------------------------------------------------
+captions   = "off"           # on   = codes with their caption text
+                             # off  = codes only, no text (captions below are kept but ignored)
+                             # both = each code twice: with text, and a "_plain" version without
+
+caption    = ""              # bold line under the code
+subcaption = ""              # smaller second line, e.g. a short URL people can type
+font         = ""            # optional: path to Inter-Bold.ttf (PNG only; SVG uses installed fonts)
+font_regular = ""            # optional: path to Inter-Regular.ttf
+
+out = "qr_out"               # output folder
+
+# Codes -------------------------------------------------------------------
+# One [[codes]] block per QR code. name is used for the file name.
+# Each block can also override: theme, logo_mode, caption, subcaption.
+
+[[codes]]
+name       = "la libre op-ed"
+url        = "https://www.lalibre.be/debats/opinions/2026/11/06/est-ce-que-je-veux-en-parler-non-le-silence-a-un-milliard-deuros-de-la-belgique-sur-les-avoirs-russes-NFZJ3NOT4BBQBCSJUQ25HLRYXA/"
+caption    = "https://www.lalibre.be"
+subcaption = ""
+
+[[codes]]
+name       = "KSE Institute: legal risk analysis"
+url        = "https://sanctions.kse.ua/en/legal-analysis-of-the-reparations-loan-for-ukraine-why-it-does-not-create-new-material-legal-risks/"
+caption    = "the legal risk ... turned out to be a paper tiger"
+subcaption = ""
+
+[[codes]]
+name       = "EU custodian"
+url        = "https://www.euronews.com/2026/09/05/could-an-eu-custodian-break-the-long-deadlock-on-the-russian-assets"
+caption    = "EU-owned depository: ... responsibility would be based on the 27 Member States"
+subcaption = ""
+
+[[codes]]
+name       = "Belgian interest"
+url        = "https://apache.be/2026/10/15/waarom-rusland-zelf-toeliet-dat-euroclear-zijn-tegoeden-gebruikte"
+caption    = "Belgian solidarity is largely paid with Russian money"
+subcaption = ""
+
+[[codes]]
+name       = "Russian agression against Belgium"
+url        = "https://www.vrt.be/vrtnws/en/2025/11/05/belgian-security-services-convinced-russia-is-behind-the-drone-i/"
+caption    = "peace in our country is already a hypothesis"
+subcaption = ""
